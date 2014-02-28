@@ -17,7 +17,7 @@
       this.starfield = this.game.add.sprite(0, 0, 'starfield');
 
 
-      this.titleTxt = this.add.bitmapText(x, y, window.space.Global.nombre + '\nERES UN POCO LOSER\nTU SCORE ES: ' + window.space.Global.score, {font: '20px minecraftia', align: 'center'});
+      this.titleTxt = this.add.bitmapText(285, y, window.space.Global.nombre + '\nERES UN POCO LOSER\nTU SCORE ES: ' + window.space.Global.score, {font: '20px minecraftia', align: 'center'});
       this.titleTxt.anchor.setTo(0.5, 0.5);
 
       y = y + this.titleTxt.height + 15;
