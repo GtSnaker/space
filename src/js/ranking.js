@@ -22,13 +22,12 @@
       y = y + this.titleTxt.height + 15;
       this.startTxt = this.add.bitmapText(x, y, 'En desarollo', {font: '12px minecraftia', align: 'center'});
       this.startTxt.anchor.setTo(0.5, 0.5);
-      this.button = this.add.button(this.world.centerX - 95, 400, 'test-button', this.onDown, this, 2, 1, 0);
+      this.button = this.add.button(this.world.centerX - 95, 400, 'Menu', this.onDown, this, 2, 1, 0);
 
       this.input.onDown.add(this.onDown, this);
     },
 	
-
-	update: function () {
+  update: function () {
 
     },
 

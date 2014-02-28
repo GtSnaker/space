@@ -29,9 +29,9 @@
       y = y + this.titleTxt.height + 5;
       this.startTxt = this.add.bitmapText(x, y, 'START', {font: '12px minecraftia', align: 'center'});
       this.startTxt.anchor.setTo(0.5, 0.5);
-      this.button = this.add.button(this.world.centerX +80, 350, 'test-button', function() {this.game.state.start('credits');} , this, 2, 1, 0);
-      this.button1 = this.add.button(this.world.centerX -260, 350 , 'test-button', function() {this.game.state.start('ranking');} , this, 2, 1, 0);
-      this.button2 = this.add.button(this.world.centerX -100, 80, 'test-button', function(){this.game.state.start('game');}, this, 2, 1, 0);
+      this.button = this.add.button(this.world.centerX +80, 350, 'Credits', function() {this.game.state.start('credits');} , this, 2, 1, 0);
+      this.button1 = this.add.button(this.world.centerX -260, 350 , 'Ranking', function() {this.game.state.start('ranking');} , this, 2, 1, 0);
+      this.button2 = this.add.button(this.world.centerX -100, 80, 'Play', function(){this.game.state.start('game');}, this, 2, 1, 0);
     
       this.music = this.game.add.audio('duel', 1, true);
       this.music.play('', 0, 1, true);

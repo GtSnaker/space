@@ -18,6 +18,10 @@
       this.load.image('player', 'assets/falcon.png');
       this.load.bitmapFont('minecraftia', 'assets/minecraftia.png', 'assets/minecraftia.xml');
       this.load.spritesheet('test-button', 'assets/button_sprite_sheet.png', 193, 71);
+      this.load.spritesheet('Credits', 'assets/Credits.png', 179.3, 71);
+      this.load.spritesheet('Play', 'assets/Play.png', 179.3, 71);
+      this.load.spritesheet('Ranking', 'assets/Ranking.png', 179.3, 71);
+      this.load.spritesheet('Menu', 'assets/Menu.png', 179.3, 71);
       this.load.image('starfield', 'assets/battleground.png');
       this.game.load.audio('duel', ['assets/sound/duelOfFates.mp3', 'assets/sound/duelOfFates.ogg']);
       this.game.load.audio('shoot', ['assets/sound/blaster.wav']);
