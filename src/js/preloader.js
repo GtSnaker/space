@@ -27,6 +27,7 @@
       this.game.load.spritesheet('puum', 'assets/smallexplosion.png', 50, 50);
       this.load.image('code', 'assets/code1.png');
       this.load.image('coden', 'assets/coden.png');
+      this.load.image('tf', 'assets/tfighter.png');
     },
 
     create: function () {

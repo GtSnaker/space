@@ -102,7 +102,7 @@
       this.player.body.velocity.y = 0;
       
       if (this.enemy1bool === false) {
-        this.enemy1 = this.add.sprite(this.game.width*Math.random(), this.game.height/2 - 200, 'enemy');
+        this.enemy1 = this.add.sprite(this.game.width*Math.random(), this.game.height/2 - 200, 'tf');
         this.enemy1.body.velocity.x = Math.random()*400+100;
         this.enemy1.body.velocity.y = +100;
         this.enemy1.anchor.setTo(0.5, 0.75);
@@ -112,7 +112,7 @@
       }
 
       if (this.enemy2bool === false) {
-        this.enemy2 = this.add.sprite((this.game.width-10)*Math.random(), this.game.height/2 - 200, 'enemy');
+        this.enemy2 = this.add.sprite((this.game.width-10)*Math.random(), this.game.height/2 - 200, 'tf');
         this.enemy2.body.velocity.y = 300;
         this.enemy2.anchor.setTo(0.5, 0.75);
         this.enemy2.name = 'enemy2';
@@ -121,7 +121,7 @@
       }
 
       if (this.enemy3bool === false) {
-        this.enemy3 = this.add.sprite(this.game.width*Math.random(), this.game.height/2 - 200, 'enemy');
+        this.enemy3 = this.add.sprite(this.game.width*Math.random(), this.game.height/2 - 200, 'tf');
         this.enemy3.body.velocity.x = 300;
         this.enemy3.anchor.setTo(0.5, 0.75);
         this.enemy3.name = 'enemy3';
