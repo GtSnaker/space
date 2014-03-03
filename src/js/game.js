@@ -22,14 +22,14 @@
       this.explosions = 0;
       this.coder = null;
       this.coder2 = null;
-      //this.codern = null;
-      //this.codern2 = null;
+      this.codern = null;
+      this.codern2 = null;
 
       this.starfield = this.game.add.sprite(0, 0, 'starfield');
       this.coder = this.game.add.sprite(50, -2530, 'code');
       this.coder2 = this.game.add.sprite(50, -5060, 'code');
-      //this.codern = this.game.add.sprite(50, -2530, 'coden');
-      //this.codern2 = this.game.add.sprite(50, -5060, 'coden');
+      this.codern = this.game.add.sprite(100, this.game.height, 'coden');
+      this.codern2 = this.game.add.sprite(100, 1758, 'coden');
 
       this.explosions = this.game.add.group();
       this.explosions.createMultiple(10, 'puum');
@@ -73,14 +73,24 @@
     },
 
     update: function () {
-      this.coder.body.velocity.y = 120;
-      this.coder2.body.velocity.y = 120;
+      this.coder.body.velocity.y = 80;
+      this.coder2.body.velocity.y = 80;
+
+      this.codern.body.velocity.y = -60;
+      this.codern2.body.velocity.y = -60;
 
       if(this.coder.y >= this.game.height) {
         this.coder.y = -5060 + this.game.height;
       }
       if(this.coder2.y >= this.game.height) {
         this.coder2.y = -5060 + this.game.height;
+      }
+
+      if(this.codern.y <= -1269) {
+        this.codern.y = 1269;
+      }
+      if(this.codern2.y <= -1269) {
+        this.codern2.y = 1269;
       }
 
       this.stateText.anchor.setTo(0.5, 0.5);

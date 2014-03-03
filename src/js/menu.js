@@ -8,6 +8,7 @@
     this.button1 = null;
     this.button2 = null;
     this.starfield = null;
+    this.musicPlaying = true;
   }
 
   Menu.prototype = {
@@ -33,8 +34,11 @@
       this.button1 = this.add.button(this.world.centerX -260, 350 , 'Ranking', function() {this.game.state.start('ranking');} , this, 2, 1, 0);
       this.button2 = this.add.button(this.world.centerX -100, 80, 'Play', function(){this.game.state.start('game');}, this, 2, 1, 0);
     
-      this.music = this.game.add.audio('duel', 1, true);
-      this.music.play('', 0, 1, true);
+      if(this.musicPlaying === true) {
+        this.music = this.game.add.audio('duel', 1, true);
+        this.music.play('', 0, 1, true);
+        this.musicPlaying = false;
+      }
     },
 
     update: function () {

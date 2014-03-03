@@ -17,7 +17,6 @@
       this.load.setPreloadSprite(this.asset);
       this.load.image('player', 'assets/falcon.png');
       this.load.bitmapFont('minecraftia', 'assets/minecraftia.png', 'assets/minecraftia.xml');
-      this.load.spritesheet('test-button', 'assets/button_sprite_sheet.png', 193, 71);
       this.load.spritesheet('Credits', 'assets/Credits.png', 179.3, 71);
       this.load.spritesheet('Play', 'assets/Play.png', 179.3, 71);
       this.load.spritesheet('Ranking', 'assets/Ranking.png', 179.3, 71);
@@ -27,7 +26,7 @@
       this.game.load.audio('shoot', ['assets/sound/blaster.wav']);
       this.game.load.spritesheet('puum', 'assets/smallexplosion.png', 50, 50);
       this.load.image('code', 'assets/code1.png');
-      //this.load.image('coden, 'assets/coden.png');
+      this.load.image('coden', 'assets/coden.png');
     },
 
     create: function () {
@@ -38,10 +37,7 @@
       if (!!this.ready) {
         this.game.state.start('menu');
       }
-      /*if (['starfield'].complete) {
-        console.log('funsiona bich');
-        window['space'].Global.score = 1;
-      }*/
+      
     },
 
     onLoadComplete: function () {
