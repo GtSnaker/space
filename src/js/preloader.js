@@ -28,6 +28,8 @@
       this.load.image('code', 'assets/code1.png');
       this.load.image('coden', 'assets/coden.png');
       this.load.image('tf', 'assets/tfighter.png');
+      //this.game.load.video('video', 'assets/creditstxt.avi');
+      //this.game.load.video('video2', 'assets/flash.swf');
     },
 
     create: function () {

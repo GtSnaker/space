@@ -6,6 +6,8 @@
     this.startTxt = null;
     this.button = null;
     this.starfield = null;
+    this.video = null;
+    this.video2 = null;
   }
 
   Credits.prototype = {
@@ -25,12 +27,12 @@
       this.button = this.add.button(this.world.centerX - 95, 400, 'Menu', this.onDown, this, 2, 1, 0);
 
       this.input.onDown.add(this.onDown, this);
+
+      /*this.video = this.game.add.video('video');
+      this.video2 = this.game.add.video('video2');*/
     },
 	
-
-	update: function () {
-
-    },
+    update: function(){},
 
     onDown: function () {
       this.game.state.start('menu');

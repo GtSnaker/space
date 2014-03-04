@@ -164,9 +164,21 @@
       this.fireEnemy2Bullet();
       this.fireEnemy3Bullet();
 
+      //FUNCION NO TAN OPTIMA PARA LAS COLISIONES PERO CONTIENE TODOS LOS CONTENIDOS NECESARIOS PARA LA EJECUCION DE LA FUNCION, 
+      //Y AUNQUE NO SE LE PASE NADA COMO PARAMETRO PUEDE ACTUAR DE LA MISMA MANERA
       this.game.physics.overlap(this.bullets, this.enemy1, this.resetEnemy1, null, this);
       this.game.physics.overlap(this.bullets, this.enemy2, this.resetEnemy2, null, this);
       this.game.physics.overlap(this.bullets, this.enemy3, this.resetEnemy3, null, this);
+
+      //FUNCION DE COLISION A LA QUE LE PASAS COMO PARAMETRO UNO DE LOS OBJETOS QUE QUIERES ELIMINAR
+      //TAMBIEN CAMBIA EL BOOLEANO DE EXISTENCIA DE LA INSTANCIA A FALSO PARA QUE PUEDAS VOLVER A CREARLO EN LA FUNCION UPDATE
+      //OPCION ALGPO MAS ACONSEJABLE A LA HORA DE HACER LAS FUNCIONES DE COLLIDE U OVERLAP
+      //NO TENGO DEL TODO CLARO QUE LA MANERA DE CAMBIAR EL BOOLEANO DE EXISTENCIA SEA ESTA,
+      //SINO QUE LA MANERA OPTIMA SERIA HACER UN PARAMETRO DENTRO DEL OBJETO, PERO ENTONCES NO SABRIA 
+      //COMO LLAMARLA CUANDO EL OBJETO EN SI ESTÁ ELIMINADO, SI ES PARTE DE ESE MISMO OBJETO...
+      /*this.game.physics.overlap(this.bullets, this.enemy1, this.resetEn(this.enemy1), function() {this.enemy1.bool = false;}, null, this);
+      this.game.physics.overlap(this.bullets, this.enemy2, this.resetEn(this.enemy2), function() {this.enemy2.bool = false;}, null, this);
+      this.game.physics.overlap(this.bullets, this.enemy3, this.resetEn(this.enemy3), function() {this.enemy3.bool = false;}, null, this);*/
 
       this.game.physics.overlap(this.enemy1Bullets, this.player, function(){this.game.state.start('lose');}, null, this);
       this.game.physics.overlap(this.enemy2Bullets, this.player, function(){this.game.state.start('lose');}, null, this);
@@ -280,6 +292,17 @@
     onInputDown: function () {
       this.game.state.start('lose');
     },
+
+    /*resetEn: function (asdasd) {
+        this.score +=1;
+        this.bullet.kill();
+        window.space.Global.score += 1;
+        asdasd.kill();
+        var explosion = this.explosions.getFirstDead();
+        explosion.reset(this.enemy1.body.x, this.enemy1.body.y);
+        explosion.play('puum', 10, false, true);
+    },*/
+
 
     resetEnemy1: function () {
       this.enemy1bool = false;
